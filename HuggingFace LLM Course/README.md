@@ -6,4 +6,6 @@ I’ll organize the materials, notes, and code scripts chapter-wise. The main so
 
 The course provides Google Colab Notebooks with code examples. I will save these notebooks in this repo, chapter-wise, and run my experiments directly on them.
 
+I also intend to add my personal notes from the chapters to corresponding ReadMe files.
+
 Wish me luck! 🤞
