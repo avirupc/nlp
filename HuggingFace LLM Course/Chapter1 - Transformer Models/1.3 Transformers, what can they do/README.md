@@ -6,7 +6,7 @@
 
 [💻 Colab Notebook link](https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/en/chapter1/section3.ipynb)
 
-# 🗒️Section Notes
+## 🗒️Section Notes
 Pipeline function (imported from `transformers`)
 
 When we pass some text to pipeline:
