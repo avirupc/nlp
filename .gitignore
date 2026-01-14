@@ -18,3 +18,6 @@ nlp/
 # # Data files (optional, if too large)
 # data/
 # *.csv
+
+# Powershell scripts
+*.ps1
