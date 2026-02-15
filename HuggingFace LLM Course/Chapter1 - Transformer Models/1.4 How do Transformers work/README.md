@@ -57,7 +57,7 @@ The source language (input sentence) → we want the decoder to see everything a
 Image source: https://jalammar.github.io/illustrated-transformer/
 
 
-Still not very clear to me, need to spend some more time!😅
+<sub>(Still not very clear to me, need to spend some more time!😅)</sub>
 
 **Update:** 
 I recently explored Jay Alammar’s 'The Illustrated Transformer' [(link)](https://jalammar.github.io/illustrated-transformer/) which is a fantastic visual guide that breaks down Transformers in a beginner-friendly way. My personal notes from that piece are available here.
