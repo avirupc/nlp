@@ -60,4 +60,4 @@ Image source: https://jalammar.github.io/illustrated-transformer/
 <sub>(Still not very clear to me, need to spend some more time!😅)</sub>
 
 **Update:** 
-I recently explored Jay Alammar’s 'The Illustrated Transformer' [(link)](https://jalammar.github.io/illustrated-transformer/) which is a fantastic visual guide that breaks down Transformers in a beginner-friendly way. My personal notes from that piece are available here.
+I recently explored Jay Alammar’s 'The Illustrated Transformer' [(link)](https://jalammar.github.io/illustrated-transformer/) which is a fantastic visual guide that breaks down Transformers in a beginner-friendly way. My personal notes from that piece are available [here](https://github.com/avirupc/nlp/blob/main/HuggingFace%20LLM%20Course/Chapter1%20-%20Transformer%20Models/1.4%20How%20do%20Transformers%20work/Notes%20from%20Illustrated%20Transformers.md).
