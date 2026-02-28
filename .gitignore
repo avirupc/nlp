@@ -21,3 +21,12 @@ nlp/
 
 # Powershell scripts
 *.ps1
+
+# Model folders
+**/models/
+
+# Model weights
+*.bin
+*.pt
+*.pth
+*.safetensors
