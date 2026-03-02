@@ -136,7 +136,6 @@ Output:
 PyTorch Version: 2.9.1+cu130
 TorchVision Version: 0.24.1+cu130
 CUDA Available: True
-CUDA Device Name: NVIDIA GeForce RTX 4060 Laptop GPU
 ```
 ```python
 if cuda_available:
@@ -161,6 +160,7 @@ else:
 ```
 Output:
 ```bash
+CUDA Device Name: NVIDIA GeForce RTX 4060 Laptop GPU
 Tensor is on GPU: True
 Matrix multiplication completed on GPU!
 ```
