@@ -14,7 +14,7 @@ The goal of this document is to summarize the main flow and core ideas presented
 + Each encoder has 2 components/sub-layers:
     1. A **self-attention** layer
     2. A feed-forward neural network (FFNN)
-+ Each decoder has the same 2 components but there is an extra laye:
++ Each decoder has the same 2 components but there is an extra layer:
     1. Self-attention
     2. **Encoder-decoder attention (extra)**
     3. FFNN
@@ -26,7 +26,11 @@ The goal of this document is to summarize the main flow and core ideas presented
     - Only the bottom-most encoder receives the word embeddings
     - The other encoders receive the output of the encoder below
 
-<u>Note:</u> The size of the list is a hyperparameter. This is basically  the length of the largesr sentence in the training dataset.
+<small>
+<u>Note:</u> The size of the list is a hyperparameter. This is basically  the length of the largest sentence in the training dataset.
+</small>
+
+<br>
 
 + In self-attention layer, the path of flow of the word in each position has inter-dependencies. But in the FFNN, they are independent of each other and hence, can be run in parallel.
 
@@ -39,6 +43,7 @@ For each input vectors (here, let's assume that the vectors are the word embeddi
 2. A **Key** vector
 3. A **Value** vector
 
+<small>
 <u>Note:</u> These vectors are created by multiplying the embedding by the matrices that we **train** during the training process.
 
 It will be like this:<br>
@@ -48,6 +53,7 @@ It will be like this:<br>
 + We multiply these two and get the Query vector, **q<sub>1</sub>**, of size 64, or q<sub>1</sub><sup>(1 x 64)</sup>.
 
 Exact similar operations are done for obtaining Key vector(k<sub>1</sub>) and Value vector (v<sub>1</sub>) for the first word X<sub>1</sub>.
+</small>
 
 ### Step 2:
 
@@ -57,7 +63,7 @@ So, if our current word is X<sub>1</sub>, we will calculate the scores of the wo
 The score of each word (say, X<sub>i</sub>) in the sentence for a given word (say, X<sub>1</sub>) <br>
 = query vector of the given word (q<sub>1</sub>) $\cdot$ key vector of the word X<sub>i</sub> ( k<sub>i</sub> )
 
-So, for processing the first word, the first score will be q<sub>1</sub>  $\cdot$ k<sub></sub> , the second score will be q<sub>1</sub>  $\cdot$ k<sub>2</sub>, and so on...
+So, for processing the first word, the first score will be q<sub>1</sub>  $\cdot$ k<sub>1</sub> , the second score will be q<sub>1</sub>  $\cdot$ k<sub>2</sub>, and so on...
 
 
 ### Step 3:
@@ -68,8 +74,10 @@ Next we divide the score by 8 ( = $\sqrt{64}$ = $\sqrt{\text{dimension of the ke
 
 Next we do **Softmax** over the score.<br>
 
+<small>
 <u>Note:</u><br> The softmax score determines how much each word will be expressed at this position.<br> 
 Clearly, the word **at this position itself** will have the highest softmax score, but it is useful sometimes to attend to another word that is relevant to the current word.
+</small>
 
 ### Step 5:
 Multiply each **value vactor** with the softmax score.<br>This will suppress the values of the vectors/words which are irrelevant.
@@ -109,11 +117,11 @@ $$M^{2 \times 2} \cdot V^{2 \times 64} = V^{2 \times 64}_{\text{weighted}} = Z^{
 Each row of Z is the sum vector we want.
 
 ## Multi-headed Attention
-" The paper further refined the self-attention layer by adding a mechanism called “multi-headed” attention. This improves the performance of the attention layer in two ways:"
+" The paper further refined the self-attention layer by adding a mechanism called “multi-headed” attention. This improves the performance of the attention layer in two ways:
 
 1. It expands the model’s ability to focus on different positions. 
 
-2. It gives the attention layer multiple “representation subspaces”.
+2. It gives the attention layer multiple “representation subspaces."
 
 "With multi-headed attention we have not only one, but multiple sets of Query/Key/Value weight matrices. The paper uses eight attention heads, so we end up with eight sets for each encoder/decoder."
 
@@ -151,11 +159,15 @@ We also add positional encodings to the decoder inputs.
 
 + This process is repeated for each vector until we reach a special symbol (< end of sentence >).
 
+<small>
 <u>Note:</u><br>
-The self attention layers in the decoder is only allowed to attend to **earlier positions** in the output sequence, **unlike the encoder**. This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation.
 
-The Encoder-Decoder Attention layer works similar to multiheaded self-attention, except it 
- 1. creates its Queries matrix from the layer **below** it
- 2. takes the Keys and Values matrix from the **output of the encoder stack**.
++ The self attention layers in the decoder is only allowed to attend to **earlier positions** in the output sequence, **unlike the encoder**. This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation.
+
++ The Encoder-Decoder Attention layer works similar to multiheaded self-attention, except it 
+    1. creates its Queries matrix from the layer **below** it
+    2. takes the Keys and Values matrix from the **output of the encoder stack**.
+
+</small>
 
 
