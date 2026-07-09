@@ -29,9 +29,9 @@ Character-based tokenizers split the text into characters, rather than words. Th
 2. There are much fewer out-of-vocabulary (unknown) tokens, since every word can be built from characters.
 
 But:
-1. less meaningful - each character doesn’t mean a lot on its ownHowever
-<br>
-This again differs according to the language; in Chinese, for example, each character carries more information than a character in a Latin language.
+- less meaningful - each character doesn’t mean a lot on its own.
+<br> However, this again differs according to the language; in Chinese, for example, each character carries more information than a character in a Latin language.
+- We will end up with a very large amount of tokens to be processed by our model: whereas a word would only be a single token with a word-based tokenizer, it can easily turn into 10 or more tokens when converted into characters.
 
 ### Subword-based tokenizers
 
