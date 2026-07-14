@@ -6,6 +6,7 @@
 
 1. [Hugging Face Datasets overview](https://youtu.be/_BZearw7f0w)
 2. [Preprocessing pairs of sentences](https://youtu.be/0u3ioSwev3s)
+3. [Dynamic Padding](https://youtu.be/7q5NyFT8REg)
 
 
 ## 🗒 Section Notes
