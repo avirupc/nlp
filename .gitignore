@@ -35,3 +35,6 @@ nlp/
 HuggingFace LLM Course/Chapter5 -  The HuggingFace Datasets library/5.3  Time to slice and dice/*jsonl
 HuggingFace LLM Course/Chapter5 -  The HuggingFace Datasets library/5.3  Time to slice and dice/drug-reviews/
 
+# Private files
+*_private.txt
+
