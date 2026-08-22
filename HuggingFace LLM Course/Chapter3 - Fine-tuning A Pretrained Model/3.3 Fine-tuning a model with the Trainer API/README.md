@@ -1,4 +1,4 @@
-﻿# 3.3  Fine-tuning a model with the Trainer API
+﻿# 3.3 Fine-tuning a model with the Trainer API
 
 [📖 Chapter link](https://huggingface.co/learn/llm-course/en/chapter3/3)
 
