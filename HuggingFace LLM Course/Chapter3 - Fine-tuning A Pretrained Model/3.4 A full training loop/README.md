@@ -1,4 +1,4 @@
-﻿# 3.4  A full training loop
+﻿# 3.4 A full training loop
 
 [📖 Chapter link](https://huggingface.co/learn/llm-course/en/chapter3/4)
 
