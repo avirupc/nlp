@@ -103,10 +103,10 @@ Query matching connects a user's search prompt to indexed content through a thre
 
 -----
 
-### Technical Note: FAISS Installation and GPU Adaptation on Windows
+### ⚙️ Technical Note: FAISS Installation and GPU Adaptation on Windows
 
 **Note on Dependencies:**
-The original notebook recommends using `faiss-gpu` for vector similarity search acceleration. However, because my notebook runs in a **Windows environment using `pip**`, standard installation paths require adjustment:
+The original notebook recommends using `faiss-gpu` for vector similarity search acceleration. However, because my notebook runs in a **Windows environment using `pip`**, standard installation paths require adjustment:
 1. **Lack of Official PyPI Support for GPU Binaries:** Meta (the maintainers of FAISS) does not officially publish pre-built GPU binaries (`faiss-gpu`) to PyPI due to package size limitations. Official GPU packages are restricted to the Conda ecosystem (via Anaconda/Miniconda) and are primarily optimized for Linux distributions.
 2. **Environment Constraint:** Since this setup relies on a standard Python virtual environment managed via `pip` on Windows rather than Conda, installing `faiss-gpu` directly via pip fails.
 3. **The Solution:** We fallback to **`faiss-cpu`** via `pip install faiss-cpu`.
