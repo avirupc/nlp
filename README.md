@@ -3,15 +3,6 @@
 This is something new for me - **Natural Language Processing** or **NLP**! 
 
 This repository contains my  NLP learning projects.  
-Each week has its own folder with Jupyter notebooks, README, and related resources.
-
-## Folder Structure
-
-
-- **WeekX/** → contains notebooks and notes for the week
-- **requirements.txt** → list of Python packages to recreate the environment
-- **.vscode/** → VS Code settings (optional)
-- **nlp/** → **not included** in GitHub (virtual environment)
 
 ---
 
