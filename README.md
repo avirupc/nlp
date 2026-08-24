@@ -2,7 +2,7 @@
 
 This is something new for me - **Natural Language Processing** or **NLP**! 
 
-This repository contains my  NLP learning projects.  
+This repository contains my NLP learning projects.
 
 ---
 
