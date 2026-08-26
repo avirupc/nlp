@@ -67,8 +67,6 @@ This indicates that the tokenizer was not well adapted to this particular vocabu
 
 ### Key Steps for Training a New Tokenizer
 
-There are several main steps.
-
 **Step 1:** Build a Training Corpus
 
 First, we need to build a training corpus composed of raw texts. The corpus should be representative of the type of data that our model will work with. For example, if we want to train a model for Python code, our tokenizer training corpus should contain a substantial amount of Python code.
