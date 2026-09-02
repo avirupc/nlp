@@ -1,4 +1,4 @@
-﻿# 6.3b  Fast tokenizers in the QA pipeline
+﻿# 6.3b Fast tokenizers in the QA pipeline
 
 [📖 Chapter link](https://huggingface.co/learn/llm-course/chapter6/3b)
 
