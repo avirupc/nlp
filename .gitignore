@@ -22,6 +22,9 @@ nlp/
 # Powershell scripts
 *.ps1
 
+# Shell scripts
+*.sh
+
 # Model folders
 **/models/
 
