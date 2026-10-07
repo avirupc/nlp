@@ -9,5 +9,3 @@ The course provides Google Colab Notebooks with code examples. I will save these
 I also intend to add my personal notes from the chapters to corresponding ReadMe files.
 
 Wish me luck! 🤞
-
-(Test line for checking sync)
