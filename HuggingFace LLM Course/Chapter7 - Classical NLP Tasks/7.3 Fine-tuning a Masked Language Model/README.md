@@ -65,3 +65,20 @@ The process looks like this:
 - It was one of the early neural architectures that demonstrated that **transfer learning could work effectively for NLP**.
 - ULMFiT was based on **LSTMs**.
 - The same general idea can be applied today using **Transformer models** instead of LSTMs.
+
+
+## What is Masked Language Modelling?
+
+Masked Language Modelling is the task of predicting which words should fill in the blanks of a (masked) sentence.
+
+Consider this example:<br>
+Input Text: "Paris is the [mask] of France."<br>
+The model should output possible values for the mask, ideally 'capital' with a high probability.
+
+This is handy before fine-tunning your model for your task. For example, if you need to use a model in a specific domain, say biomedical documents, models like BERT will treat your domain-specific words as rare tokens. If you train a masked language model using your biomedical corpus and then fine-tune your model pn a downstream task, you will have better performance.
+
+### Metrics
+
+Classification metrics cannot be used as there is no single correct answer. Instead, we evaluate the distribution of the masked values. Common metrics are:
+- Cross Entropy Loss
+- Perplexity (exponential of Cross Entropy Loss)
