@@ -82,3 +82,50 @@ This is handy before fine-tunning your model for your task. For example, if you 
 Classification metrics cannot be used as there is no single correct answer. Instead, we evaluate the distribution of the masked values. Common metrics are:
 - Cross Entropy Loss
 - Perplexity (exponential of Cross Entropy Loss)
+
+
+## Perplexity
+
+
+**Likelihood of a sequence of words:**
+
+$$
+P(X)=\prod_{i=0}^{t}p(x_i\mid x_{<i})
+$$
+
+where:
+
+- $X=(x_0,x_1,\ldots,x_t)$ is the sequence of words.
+- $x_i$ is the $i$-th word in the sequence.
+- $x_{<i}$ denotes all words preceding $x_i$, i.e., the context available when predicting $x_i$.
+- $p(x_i\mid x_{<i})$ is the conditional probability of word $x_i$ given its preceding context.
+<br>
+<br>
+
+**Cross-entropy:**
+
+$$
+CE(X)=-\frac{1}{t+1}\log P(X)
+$$
+
+Substituting the likelihood equation gives:
+
+$$
+CE(X)=-\frac{1}{t+1}
+\sum_{i=0}^{t}\log p(x_i\mid x_{<i})
+$$
+
+**Perplexity:**
+
+Perplexity is the exponential of the cross-entropy:
+
+$$
+\begin{aligned}
+PPL(X)&=e^{CE(X)}\\[8pt]
+&=\exp\left(
+-\frac{1}{t+1}
+\sum_{i=0}^{t}\log p(x_i\mid x_{<i})
+\right)
+\end{aligned}
+$$
+
