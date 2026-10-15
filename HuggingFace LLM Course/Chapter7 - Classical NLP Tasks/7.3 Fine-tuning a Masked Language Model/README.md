@@ -89,9 +89,7 @@ Classification metrics cannot be used as there is no single correct answer. Inst
 
 **Likelihood of a sequence of words:**
 
-$$
-P(X)=\prod_{i=0}^{t} p(x_i \mid x_{<i})
-$$
+$P(X)=\prod_{i=0}^{t} p(x_i \mid x_{<i})$
 
 where:
 
@@ -104,28 +102,23 @@ where:
 
 **Cross-entropy:**
 
-$$
-CE(X)=-\frac{1}{t+1}\log P(X)
-$$
+$CE(X)=-\frac{1}{t+1}\log P(X)$
 
 Substituting the likelihood equation gives:
 
-$$
-CE(X)=-\frac{1}{t+1}
-\sum_{i=0}^{t}\log p(x_i\mid x_{<i})
-$$
+$CE(X)=-\frac{1}{t+1}
+\sum_{i=0}^{t}\log p(x_i\mid x_{<i})$
 
 **Perplexity:**
 
 Perplexity is the exponential of the cross-entropy:
 
-$$
-\begin{aligned}
+$\begin{aligned}
 PPL(X)&=e^{CE(X)}\\[8pt]
 &=\exp\left(
 -\frac{1}{t+1}
 \sum_{i=0}^{t}\log p(x_i\mid x_{<i})
 \right)
 \end{aligned}
-$$
+$
 
