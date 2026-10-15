@@ -90,7 +90,7 @@ Classification metrics cannot be used as there is no single correct answer. Inst
 **Likelihood of a sequence of words:**
 
 $$
-P(X)=\prod_{i=0}^{t}p(x_i\mid x_{<i})
+P(X)=\prod_{i=0}^{t} p(x_i \mid x_{<i})
 $$
 
 where:
