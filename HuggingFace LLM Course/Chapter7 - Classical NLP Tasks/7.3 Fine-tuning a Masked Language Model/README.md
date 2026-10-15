@@ -113,12 +113,13 @@ $CE(X)=-\frac{1}{t+1}
 
 Perplexity is the exponential of the cross-entropy:
 
-$\begin{aligned}
+$$
+\begin{aligned}
 PPL(X)&=e^{CE(X)}\\[8pt]
 &=\exp\left(
 -\frac{1}{t+1}
 \sum_{i=0}^{t}\log p(x_i\mid x_{<i})
 \right)
 \end{aligned}
-$
+$$
 
